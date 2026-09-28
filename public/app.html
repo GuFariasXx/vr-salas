@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VR Salas</title>
+<link rel="icon" href="/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-brand"><img src="/img/logo.svg" alt=""><div><b>VR Salas</b><small>1.0.0</small></div></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sb-user" id="sb-user"></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="tb-btn menu-toggle" id="menu-toggle" aria-label="Menu"></button>
+        <div class="crumb" id="crumb"></div>
+      </div>
+      <div class="tb-actions">
+        <button class="btn btn-outline btn-sm" id="tb-qr" title="Check-in por QR code"></button>
+        <button class="btn btn-primary btn-sm" id="tb-new"></button>
+        <button class="tb-btn" id="tb-bell" aria-label="Notificações"></button>
+        <div class="menu notif-panel hidden" id="notif-panel"></div>
+      </div>
+    </header>
+    <main class="content" id="view"></main>
+  </div>
+</div>
+<div class="toasts" id="toasts"></div>
+<div id="modal-root"></div>
+<script src="/js/icons.js"></script>
+<script src="/vendor/jsqr/jsQR.js"></script>
+<script src="/js/qrscan.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

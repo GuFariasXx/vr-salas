@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VR Salas · Login</title>
+<link rel="icon" href="/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="login">
+  <section class="login-hero">
+    <div class="brand"><img src="/img/logo.svg" alt="">VR SALAS</div>
+    <div class="hero-tag">AGENDE. REÚNA. SIMPLIFIQUE.</div>
+    <div class="sub">Agendamento de salas de reunião da VR Software</div>
+  </section>
+
+  <section class="login-card">
+    <div class="login-logo"><img src="/img/logo.svg" alt=""><div><b>VR SALAS</b><small>Versão 1.0.0</small></div></div>
+
+    <!-- Login -->
+    <form id="f-login" novalidate>
+      <h1>Login</h1>
+      <p class="lead">Entre com suas credenciais para acessar o sistema.</p>
+      <div id="login-alert"></div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <div class="input-icon" data-icon="mail"><input class="input" id="email" type="email" autocomplete="username" placeholder="nome@vrsoft.com.br"></div>
+        <span class="err-msg hidden" data-for="email">E-mail é obrigatório</span>
+      </div>
+      <div class="field">
+        <label for="password">Senha <span class="req">*</span></label>
+        <div class="input-icon" data-icon="lock"><input class="input" id="password" type="password" autocomplete="current-password" placeholder="••••••••••"><button type="button" class="trail" id="toggle-pw" aria-label="Mostrar senha"></button></div>
+        <span class="err-msg hidden" data-for="password">Senha é obrigatório</span>
+      </div>
+      <div class="login-opts">
+        <label class="check"><input type="checkbox" id="remember" checked> Lembrar meu usuário</label>
+        <a href="#" id="go-forgot">Esqueci minha senha</a>
+      </div>
+      <button class="btn btn-primary btn-block" id="btn-login">Entrar</button>
+      <div id="google-area" class="hidden">
+        <div class="divider">ou</div>
+        <a class="btn btn-google btn-block" href="/api/auth/google" id="btn-google"></a>
+      </div>
+    </form>
+
+    <!-- Esqueci minha senha -->
+    <form id="f-forgot" class="hidden" novalidate>
+      <h1>Esqueci minha senha</h1>
+      <p class="lead">Informe seu e-mail e enviaremos um link para redefinir a senha.</p>
+      <div id="forgot-alert"></div>
+      <div class="field"><label for="f-email">E-mail</label>
+        <div class="input-icon" data-icon="mail"><input class="input" id="f-email" type="email" placeholder="nome@vrsoft.com.br"></div></div>
+      <button class="btn btn-primary btn-block">Enviar link</button>
+      <p style="text-align:center;margin-top:16px"><a href="#" class="go-login">Voltar ao login</a></p>
+    </form>
+
+    <!-- Redefinir senha -->
+    <form id="f-reset" class="hidden" novalidate>
+      <h1>Nova senha</h1>
+      <p class="lead">Defina uma nova senha com ao menos 8 caracteres.</p>
+      <div id="reset-alert"></div>
+      <div class="field"><label for="r-pw">Nova senha</label>
+        <div class="input-icon" data-icon="lock"><input class="input" id="r-pw" type="password" autocomplete="new-password"></div></div>
+      <div class="field"><label for="r-pw2">Confirmar senha</label>
+        <div class="input-icon" data-icon="lock"><input class="input" id="r-pw2" type="password" autocomplete="new-password"></div></div>
+      <button class="btn btn-primary btn-block">Salvar senha</button>
+      <p style="text-align:center;margin-top:16px"><a href="#" class="go-login">Voltar ao login</a></p>
+    </form>
+
+    <div class="login-foot">
+      <span class="vr"><img src="/img/logo.svg" alt="">VR SOFTWARE</span>
+      <span>Simplifique</span>
+    </div>
+  </section>
+</div>
+<script src="/js/icons.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>
